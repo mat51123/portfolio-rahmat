@@ -609,6 +609,11 @@ footer { background: var(--black); color: var(--white); padding: 48px 48px 28px;
   }
 }
 
+/* Hide hamburger menu toggle by default on desktop */
+.menu-toggle-btn {
+  display: none;
+}
+
 /* ---- MOBILE AND TABLET RESPONSIVE REFINEMENTS ---- */
 @media (max-width: 768px) {
   /* --- NAVBAR MOBILE --- */
@@ -819,10 +824,6 @@ footer { background: var(--black); color: var(--white); padding: 48px 48px 28px;
   }
 }
 
-/* Hide hamburger menu toggle by default on desktop */
-.menu-toggle-btn {
-  display: none;
-}
 
 /* ---- TICKER DARK THEME OVERRIDES ---- */
 [data-theme="dark"] .ticker {
