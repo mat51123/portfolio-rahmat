@@ -10,9 +10,9 @@ export function About() {
   `).join('')
 
   const dynamicStats = [
-    { num: `${magang.length}`, label: 'Pengalaman Magang' },
-    { num: `${kepanitiaan.length}`, label: 'Kepanitiaan' },
-    { num: `${organisasi.length}`, label: 'Organisasi Aktif' },
+    { num: `${magang.length}`, label: 'Magang/Kerja' },
+    { num: `${kepanitiaan.length}`, label: 'Event & Kegiatan' },
+    { num: `${organisasi.length}`, label: 'Pengalaman Organisasi' },
     { num: `${hardSkills.length}`, label: 'Teknologi Web' },
   ]
 
