@@ -44,21 +44,42 @@ function initThemeToggle() {
 
 // ---- INIT SCROLL REVEAL ----
 function initScrollReveal() {
-  // Dynamically add reveal class to major sections/cards for premium scroll animations
-  const targets = document.querySelectorAll(
-    'section, .project-card, .exp-item, .pan-card, .magang-card, .edu-card, .stat-box'
-  )
-  
-  targets.forEach(el => {
-    el.classList.add('reveal')
+  // 1. Observe sections for standard fade-up reveal
+  const sections = document.querySelectorAll('section')
+  sections.forEach(sec => {
+    sec.classList.add('reveal')
   })
 
-  const observer = new IntersectionObserver((entries) => {
+  const sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active')
-        // Option: stop observing once revealed
-        observer.unobserve(entry.target)
+        sectionObserver.unobserve(entry.target)
+      }
+    })
+  }, {
+    threshold: 0.05,
+    rootMargin: '0px 0px -40px 0px'
+  })
+
+  sections.forEach(sec => sectionObserver.observe(sec))
+
+  // 2. Staggered reveal for child elements in grids/lists
+  const parents = document.querySelectorAll(
+    '.projects-grid, .panitiaan-grid, .magang-grid, .edu-grid, .stats-row, .exp-list'
+  )
+
+  const parentObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const children = entry.target.children
+        Array.from(children).forEach((child, index) => {
+          child.style.opacity = '1'
+          child.style.transform = 'translateY(0)'
+          child.style.transition = 'opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)'
+          child.style.transitionDelay = `${index * 0.12}s`
+        })
+        parentObserver.unobserve(entry.target)
       }
     })
   }, {
@@ -66,7 +87,14 @@ function initScrollReveal() {
     rootMargin: '0px 0px -40px 0px'
   })
 
-  targets.forEach(el => observer.observe(el))
+  parents.forEach(parent => {
+    Array.from(parent.children).forEach(child => {
+      child.style.opacity = '0'
+      child.style.transform = 'translateY(30px)'
+      child.style.transition = 'opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)'
+    })
+    parentObserver.observe(parent)
+  })
 }
 
 // ---- INIT MOBILE MENU ----
