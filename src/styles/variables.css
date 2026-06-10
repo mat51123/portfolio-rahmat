@@ -1,0 +1,52 @@
+/* ---- CSS VARIABLES ---- */
+:root {
+  /* ---- ACCENT COLORS ---- */
+  --accent1: #7c5cbf;
+  --accent2: #e85d5d;
+  --accent3: #f4a535;
+  --grad: linear-gradient(90deg, #7c5cbf, #e85d5d, #f4a535);
+  
+  /* ---- LIGHT THEME (DEFAULT) ---- */
+  --bg-primary: #f5f3ee;
+  --bg-card: #ffffff;
+  --bg-dark-section: #0a0a0a;
+  --text-primary: #0a0a0a;
+  --text-secondary: #666666;
+  --text-on-dark: #f5f3ee;
+  --border-color: #e4e0d8;
+  --nav-bg: rgba(245, 243, 238, 0.88);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.08);
+  
+  /* ---- COMPATIBILITY MAPPINGS FOR BASE STYLE ---- */
+  --black: var(--text-primary);
+  --white: var(--text-on-dark);
+  --light-bg: var(--bg-primary);
+  --card-bg: var(--bg-card);
+  --border: var(--border-color);
+  --gray: var(--text-secondary);
+}
+
+/* ---- DARK THEME ---- */
+[data-theme="dark"] {
+  --bg-primary: #0d0c11;
+  --bg-card: #15131c;
+  --bg-dark-section: #08070a;
+  --text-primary: #f5f3ee;
+  --text-secondary: #a39fbd;
+  --text-on-dark: #f5f3ee;
+  --border-color: #22202b;
+  --nav-bg: rgba(13, 12, 17, 0.88);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.4);
+  
+  /* For compatibility, keep black/white mapped for text inside components */
+  --black: var(--text-primary);
+  --white: var(--text-on-dark);
+  --light-bg: var(--bg-primary);
+  --card-bg: var(--bg-card);
+  --border: var(--border-color);
+  --gray: var(--text-secondary);
+}
