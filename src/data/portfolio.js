@@ -57,7 +57,7 @@ export const kepanitiaan = [
     year: '2025',
     name: 'Pengabdian Kepada Masyarakat',
     role: 'Pemberdayaan Masyarakat oleh Mahasiswa DPPM Kemdiktisaintek — Prototype',
-    desc: 'Merancang, menguji, dan mempresentasikan prototipe kepada dosen sebagai bukti progres kegiatan.',
+    desc: 'Merancang, menguji, dan mempresentasikan prototipe kepada dosen dan mitra sebagai bukti progres kegiatan.',
   },
   {
     year: '2025',
