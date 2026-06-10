@@ -1,7 +1,7 @@
 // ---- STYLES ----
 import './styles/variables.css'
-import './styles/style.css'
 import './styles/components.css'
+import './styles/style.css'
 
 // ---- COMPONENTS ----
 import { Navbar }          from './components/Navbar.js'

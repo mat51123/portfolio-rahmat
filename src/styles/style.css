@@ -75,7 +75,11 @@ section { padding: 100px 48px; }
   nav { padding: 16px 20px; }
   .nav-links { display: none; }
   section { padding: 60px 20px; }
-  .hero { padding: 100px 20px 50px; }
+  .hero {
+    padding: 100px 20px 50px;
+    min-height: auto;
+    justify-content: flex-start;
+  }
   .about-grid, .exp-grid, .contact-grid, .edu-grid { grid-template-columns: 1fr; gap: 40px; }
   .pan-card, .magang-card { flex: 1 1 100%; }
   .stats-row { flex-direction: column; }
