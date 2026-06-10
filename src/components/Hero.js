@@ -18,7 +18,6 @@ export function Hero() {
       &nbsp;&nbsp;${profile.subtitle}&nbsp;&nbsp;
     </div>
     <h1>Rahmat<br><span class="grad-text">Syahputra</span></h1>
-    <p class="hero-sub">${profile.title}.</p>
     <div class="hero-actions">
       <a href="${waUrl}" target="_blank" class="btn-primary">Hubungi Saya ↗</a>
       <a href="#about" class="btn-outline">Lihat Portfolio</a>
